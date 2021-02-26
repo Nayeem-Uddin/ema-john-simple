@@ -7,6 +7,11 @@ const Header = () => {
     return (
         <div className='header'>
             <img src={logo} alt=""/>
+            <nav>
+                <a href="/shop">Shop</a>
+                <a href="/order">Review Order</a>
+                <a href="/manage">Manage Inventory</a>
+            </nav>
         </div>
     );
 };
