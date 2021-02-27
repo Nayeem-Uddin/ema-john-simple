@@ -7,7 +7,7 @@ function Cart(props) {
     return (
         <div>
             <h3>This is a cart</h3>
-            <h5>Items Ordered: {cart.length}</h5>
+            <h5>Items ordered: {cart.length}</h5>
         </div>
     );
 }
