@@ -14,9 +14,9 @@ function Product(props) {
             <div className='product-name'>
                 <h4>{name}</h4>
                 <p>By: {seller}</p>
-                <p>{price}</p>
+                <p>$ {price}</p>
                 <p>Only {stock} left in stock - order soon</p>
-                <button className='cart-btn' onClick={()=>props.handleAddProduct(props.product.category)}
+                <button className='cart-btn' onClick={()=>props.handleAddProduct(props.product)}
                 ><FontAwesomeIcon icon={faShoppingCart}/>Add to Cart</button>
             </div>
         </div>
