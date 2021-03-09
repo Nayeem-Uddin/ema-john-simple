@@ -1,10 +1,10 @@
 import './Cart.css'
-
 import React from 'react';
 
 function Cart(props) {
     const cart = props.cart;
-    const total = cart.reduce((total, pdPrice) => total + pdPrice.price, 0)
+    // console.log(cart);
+    const total = cart.reduce((total, pdPrice) => total + pdPrice.price * pdPrice.quantity, 0)
     // let total = 0;
     // for(let i = 0; i < cart.length ; i++){
     //     const pdPrice = cart[i];
@@ -35,12 +35,15 @@ function Cart(props) {
     
     return (
         <div>
-            <h3>This is a cart</h3>
+            <h3 className="text-primary">Order Summary</h3>
             <h5>Items Ordered : {cart.length}</h5>
             <h5>Product Price : {formatNumber(total)}</h5>
             <p><small>Shipping Cost : {formatNumber(shipping)}</small></p>
-            <p><small>tax+VAt : {formatNumber(tax)}</small></p>
+            <p><small>tax+VAT : {formatNumber(tax)}</small></p>
             <h3>Total Price : {formatNumber(grandTotal)} </h3>
+            {
+                props.children
+            }
         </div>
     );
 }
